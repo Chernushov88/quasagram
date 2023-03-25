@@ -13,12 +13,12 @@
           <q-item>
             <q-item-section avatar>
               <q-avatar>
-                <img src="https://s.gravatar.com/avatar/ce7f3697e231df38b3ca6065848520da?s=80">
+                <img src="https://scontent.fbrs5-1.fna.fbcdn.net/v/t31.18172-1/337974_100694096723149_626109477_o.jpg?stp=c52.14.172.172a_dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_ohc=YFfulzeZfSwAX85qNBL&_nc_ht=scontent.fbrs5-1.fna&oh=00_AfALUeTe0GOtrM_h_2LOgu6DrD_SkYIFZ6KryxshF4Nd-w&oe=6446F45E">
               </q-avatar>
             </q-item-section>
 
             <q-item-section>
-              <q-item-label class="text-bold">danny__connell</q-item-label></q-item-label>
+              <q-item-label class="text-bold">serhii__chernyshov</q-item-label>
               <q-item-label caption>
                 {{ post.location }}
               </q-item-label>
@@ -42,14 +42,14 @@
         <q-item class="fixed">
           <q-item-section avatar>
             <q-avatar size="48px">
-              <img src="https://s.gravatar.com/avatar/ce7f3697e231df38b3ca6065848520da?s=80">
+              <img src="https://scontent.fbrs5-1.fna.fbcdn.net/v/t31.18172-1/337974_100694096723149_626109477_o.jpg?stp=c52.14.172.172a_dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_ohc=YFfulzeZfSwAX85qNBL&_nc_ht=scontent.fbrs5-1.fna&oh=00_AfALUeTe0GOtrM_h_2LOgu6DrD_SkYIFZ6KryxshF4Nd-w&oe=6446F45E">
             </q-avatar>
           </q-item-section>
 
           <q-item-section>
-            <q-item-label class="text-bold">danny__connell</q-item-label></q-item-label>
+            <q-item-label class="text-bold">serhii__chernyshov</q-item-label>
             <q-item-label caption>
-              Danny Connell
+              Serhii Chernyshov
             </q-item-label>
           </q-item-section>
         </q-item>

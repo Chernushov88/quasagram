@@ -10,9 +10,10 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "axios": "^1.2.1",
     "@quasar/extras": "^1.0.0",
+    "axios": "^1.2.1",
     "core-js": "^3.6.5",
+    "md-gum-polyfill": "^1.0.0",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
@@ -22,9 +23,10 @@
     "eslint-webpack-plugin": "^2.0.0",
     "eslint-config-prettier": "^8.1.0",
     "prettier": "^2.5.1",
-    "@quasar/app": "^2.0.0"
+    "@quasar/app": "^2.0.6"
   },
   "browserslist": [
+    "ie >= 11",
     "last 10 Chrome versions",
     "last 10 Firefox versions",
     "last 4 Edge versions",
@@ -39,17 +41,5 @@
     "node": ">= 10.18.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  },
-  "browserslist": [
-    "ie >= 11",
-    "last 10 Chrome versions",
-    "last 10 Firefox versions",
-    "last 4 Edge versions",
-    "last 7 Safari versions",
-    "last 8 Android versions",
-    "last 8 ChromeAndroid versions",
-    "last 8 FirefoxAndroid versions",
-    "last 10 iOS versions",
-    "last 5 Opera versions"
-  ]
+  }
 }
