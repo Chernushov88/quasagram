@@ -95,11 +95,11 @@ module.exports = function (/* ctx */) {
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:
       //
-      // components: [],
-      // directives: [],
+      components: [],
+      directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Dialog']
     },
 
     // animations: 'all', // --- includes all animations
@@ -116,8 +116,8 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
+        name: `Quasagram`,
+        short_name: `Quasagram`,
         description: `study quasar framework`,
         display: 'standalone',
         orientation: 'portrait',
@@ -156,6 +156,7 @@ module.exports = function (/* ctx */) {
     // Full list of options: https://v1.quasar.dev/quasar-cli/developing-cordova-apps/configuring-cordova
     cordova: {
       // noIosLegacyBuildFlag: true, // uncomment only if you know what you are doing
+      id: 'org.cordova.quasar.app'
     },
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/developing-capacitor-apps/configuring-capacitor
