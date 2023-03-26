@@ -38,7 +38,7 @@
       <div class="row justify-center q-ma-md">
         <q-input
           v-model="post.caption"
-          class="col col-sm-6"
+          class="col -col-sm-6"
           label="Caption"
           dense
         />
@@ -47,7 +47,7 @@
         <q-input
           v-model="post.location"
           :loading="locationLoading"
-          class="col col-sm-6"
+          class="col -col-sm-6"
           label="Location"
           dense
         >
@@ -174,22 +174,39 @@ export default {
     getLocation() {
       this.locationLoading = true
       navigator.geolocation.getCurrentPosition(position => {
-        console.log(position)
+        console.log('position:',position)
         this.getCityAndCountry(position)
       }, err => {
-        this.locationError()
+        this.$q.dialog({
+          title: 'Error',
+          message: 'Could not find your location.'
+        })
       }, { timeout: 7000 })
     },
     getCityAndCountry(position) {
-      let apiUrl = `https://geocode.xyz/${ position.coords.latitude },${ position.coords.longitude }?json=1`
+      //let apiUrl = `https://geocode.xyz/${ position.coords.latitude },${ position.coords.longitude }?json=1`
+      //let apiUrl = `https://geocode.xyz/${ position.coords.latitude },${ position.coords.longitude }?json=1&auth=905923948358253984867x15554`
+
+      //let apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyDFufCmtrgZK0Lpm8SoHy8MHCtx9ZhONKE`
+      let apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&key=AIzaSyCZsTkyGuANfKeWhBrkNqemQZkDhfiYs4A`
+
+      /**
+     https://maps.googleapis.com/maps/api/geocode/json?latlng="lat +
+        "," +
+        long +
+        "&key={yourAPIKey}
+       */
+
       this.$axios.get(apiUrl).then(result => {
+        console.log('result:',result)
         this.locationSuccess(result)
       }).catch(err => {
         this.locationError()
       })
     },
     locationSuccess(result) {
-      this.post.location = result.data.city
+      //this.post.location = result.data.city
+      this.post.location = result.data.results[6].formatted_address
       if (result.data.country) {
         this.post.location += `, ${ result.data.country }`
       }
